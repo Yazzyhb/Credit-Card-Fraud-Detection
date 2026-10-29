@@ -6,13 +6,7 @@ This project implements a machine learning solution to detect fraudulent credit 
 
 ## Dataset Source
 
-The dataset used in this project is the Credit Card Fraud Detection dataset from Kaggle. Due to its size, it is not included in this repository.
-
-**To get the dataset:**
-1. Visit [Kaggle Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
-2. Download the `creditcard.csv` file
-3. Place it in the project root directory
-
+The dataset used in this project is the Credit Card Fraud Detection dataset from Kaggle.
 ## Dataset Characteristics
 
 - **Total transactions**: 284,807
@@ -76,20 +70,4 @@ We implemented and compared several machine learning models with different techn
 5. **False Positives vs. False Negatives**:
    - There's an inherent trade-off between catching more fraud (higher recall) and minimizing false alarms (higher precision)
    - The optimal balance depends on the business cost of each error type
-
-## Conclusion
-
-The credit card fraud detection project successfully demonstrated how to build an effective machine learning model for a highly imbalanced classification problem. The XGBoost model with scale_pos_weight parameter and optimized threshold achieved the best balance between precision and recall, making it suitable for real-world fraud detection.
-
-Key lessons from this project:
-
-1. **Class imbalance** must be addressed explicitly through techniques like SMOTE, undersampling, or algorithm-specific parameters.
-
-2. **Threshold optimization** is crucial for imbalanced problems - the default 0.5 threshold is rarely optimal.
-
-3. **Evaluation metrics** must go beyond accuracy - precision, recall, F1-score, and AUC provide more meaningful insights for imbalanced problems.
-
-4. **Feature engineering** and selection are important - some features are much more predictive of fraud than others.
-
-5. **Model selection** matters - tree-based ensemble methods (XGBoost, Gradient Boosting) outperformed simpler models for this complex problem.
 
